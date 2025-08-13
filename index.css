@@ -173,6 +173,15 @@ input[type="radio"]{
     background-color: #fff0ee;
 }
 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
 .cat-img{
     max-width: 340px;
     max-height: 420px;
@@ -187,8 +196,8 @@ input[type="radio"]{
     border: 1px solid #555;
     color: #555;
     border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 15px;
+    padding: 3px 5px;
+    font-size: 10px;
 }
 
 .meme-modal-close-btn:hover{

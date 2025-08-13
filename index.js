@@ -6,7 +6,13 @@ const gifsOnlyOption = document.getElementById('gifs-only-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
+const overlay = document.getElementById('modal-overlay')
 
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        closeModal()
+    }
+})
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
@@ -23,6 +29,7 @@ function highlightCheckedOption(e){
 }
 
 function closeModal(){
+    overlay.style.display = 'none'
     memeModal.style.display = 'none'
 }
 
@@ -35,6 +42,7 @@ function renderCat(){
         alt="${catObject.alt}"
         >
         `
+    overlay.style.display = 'flex'
     memeModal.style.display = 'flex'
 }
 
